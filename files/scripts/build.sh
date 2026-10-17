@@ -4,7 +4,9 @@ set -oue pipefail
 
 shopt -s nullglob
 
+dnf5 -y install dnf-plugins-core
 dnf5 -y config-manager addrepo --from-repofile=https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 
 dnf5 -y install fuse
 dnf5 -y install python3-uv
@@ -14,13 +16,11 @@ dnf5 -y install ruby
 dnf5 -y install golang
 dnf5 -y install gcc clang
 
-dnf5 -y install dnf-plugins-core
-dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
-dnf5 -y install brave-origin
-dnf5 -y install torbrowser-launcher
+dnf5 -y install brave-origin torbrowser-launcher
 
+dnf5 -y copr enable karlisk/ventoy
 dnf5 -y copr enable cubewhy/jetbrains
-dnf5 -y install tealdeer fastfetch micro zed gh git desktop-plus-bin gnome-boxes lact obs-studio mediawriter
+dnf5 -y install tealdeer fastfetch micro zed gh git desktop-plus-bin gnome-boxes lact obs-studio ventoy
 dnf5 -y install jetbrains-pycharm jetbrains-clion jetbrains-rustrover
 
 # dnf5 -y install steam faugus-launcher heroic-games-launcher protonplus mangohud
@@ -57,4 +57,4 @@ systemctl enable lactd
 systemctl enable AmneziaVPN
 systemctl enable v2raya
 
-# add zapret2, add proper comments to everything, replace gnome-boxes with virt-manager
+# add zapret2, add proper comments to everything

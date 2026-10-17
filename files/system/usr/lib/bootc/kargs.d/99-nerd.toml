@@ -1,0 +1,2 @@
+kargs = ["selinux=0", "mitigations=off", "amd_pstate=passive", "rcutree.enable_rcu_lazy=1", "nowatchdog", "quiet", "splash", "amdgpu.ppfeaturemask=0xffffffff"]
+match-architectures = ["x86_64"]

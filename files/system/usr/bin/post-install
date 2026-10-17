@@ -11,9 +11,9 @@ fi
 
 tldr --update
 
-wget -O /etc/hosts https://raw.githubusercontent.com/MAnitosik/NerdOS/refs/heads/main/files/system/etc/hosts
+wget -O /etc/hosts https://raw.githubusercontent.com/MAnitosik/mx-os/refs/heads/main/hosts
 
-wget -O /etc/rpm-ostreed.conf https://raw.githubusercontent.com/MAnitosik/NerdOS/refs/heads/main/files/system/etc/rpm-ostreed.conf
+wget -O /etc/rpm-ostreed.conf https://raw.githubusercontent.com/MAnitosik/mx-os/refs/heads/main/files/system/etc/rpm-ostreed.conf
 
 wget -O /etc/motd.d/welcome.motd https://raw.githubusercontent.com/MAnitosik/NerdOS/refs/heads/main/files/system/etc/motd.d/welcome.motd
 

@@ -20,6 +20,8 @@ dnf5 -y install ruby
 dnf5 -y install golang
 dnf5 -y install gcc clang
 
+dnf5 -y install wine wine-dxvk gstreamer1-plugins-good dosbox-staging winetricks
+
 dnf5 -y install brave-origin torbrowser-launcher
 
 dnf5 -y install tealdeer fastfetch micro zed gh git desktop-plus-bin gnome-boxes lact obs-studio ventoy

@@ -14,8 +14,6 @@ dnf5 -y install ruby
 dnf5 -y install golang
 dnf5 -y install gcc clang
 
-dnf5 -y install cosign
-
 dnf5 -y install dnf-plugins-core
 dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 dnf5 -y install brave-origin

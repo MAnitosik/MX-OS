@@ -9,9 +9,9 @@ modules:
     files:
       - source: system
         destination: /
-  - type: signing
   - type: script
     scripts:
       - build.sh
       - kernel.sh
       - initramfs.sh
+  - type: signing

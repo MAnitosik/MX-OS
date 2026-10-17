@@ -2,10 +2,8 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 name: mx-os
 description: Mr? Ms? Wrong! MX is the right choice!
-
 base-image: ghcr.io/blue-build/base-images/fedora-cosmic
 image-version: latest
-
 modules:
   - type: files
     files:

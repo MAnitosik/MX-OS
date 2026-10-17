@@ -14,10 +14,10 @@ concurrency:
 env:
   ARCH: x86_64
   IMAGE_NAME: mx-os
-  IMAGE_REPO: ghcr.io/manitosik/mx-os
+  IMAGE_REPO: ghcr.io/manitosik
   IMAGE_TAG: latest
-  VERSION: "44"
-  VARIANT: "main"
+  VERSION: 44
+  VARIANT: cosmic
 jobs:
   bluebuild:
     name: Build Custom Image

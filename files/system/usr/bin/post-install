@@ -15,8 +15,6 @@ wget -O /etc/hosts https://raw.githubusercontent.com/MAnitosik/mx-os/refs/heads/
 
 wget -O /etc/rpm-ostreed.conf https://raw.githubusercontent.com/MAnitosik/mx-os/refs/heads/main/files/system/etc/rpm-ostreed.conf
 
-wget -O /etc/motd.d/welcome.motd https://raw.githubusercontent.com/MAnitosik/NerdOS/refs/heads/main/files/system/etc/motd.d/welcome.motd
-
 mkdir -p ~/ventoy
 wget -O ~/ventoy/ventoy-1.1.18-linux.tar.gz https://github.com/ventoy/Ventoy/releases/download/v1.1.18/ventoy-1.1.18-linux.tar.gz
 

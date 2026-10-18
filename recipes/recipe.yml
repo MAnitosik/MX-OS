@@ -13,5 +13,6 @@ modules:
     scripts:
       - build.sh
       - kernel.sh
+      - sign.sh
       - initramfs.sh
   - type: signing

@@ -11,7 +11,7 @@ dnf5 -y copr enable cubewhy/jetbrains
 dnf5 -y copr enable bieszczaders/kernel-cachyos-lto
 dnf5 -y copr enable bieszczaders/kernel-cachyos-addons
 dnf5 -y --refresh makecache
-dnf5 -y --best --refresh --allow-vendor-change --allowerasing distro-sync
+dnf5 -y --best --refresh --allow-vendor-change distro-sync --allowerasing
 
 dnf5 -y install fuse
 dnf5 -y install python3-uv

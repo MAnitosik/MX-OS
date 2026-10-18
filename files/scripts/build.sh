@@ -4,10 +4,9 @@ set -oue pipefail
 
 shopt -s nullglob
 
-dnf5 -y --best --refresh makecache
-dnf5 -y --best --refresh upgrade
-dnf5 -y --best --refresh distro-sync
-dnf5 -y --best --refresh makecache
+dnf5 -y --refresh makecache
+dnf5 -y --refresh distro-sync
+dnf5 -y --refresh makecache
 
 dnf5 -y install dnf-plugins-core
 dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-gpg-keys terra-release terra-release-extras terra-release-mesa # terra-release-multimedia
@@ -16,10 +15,9 @@ dnf5 -y copr enable cubewhy/jetbrains
 dnf5 -y copr enable bieszczaders/kernel-cachyos-lto
 dnf5 -y copr enable bieszczaders/kernel-cachyos-addons
 
-dnf5 -y --best --refresh makecache
-dnf5 -y --best --refresh upgrade
-dnf5 -y --best --refresh distro-sync
-dnf5 -y --best --refresh makecache
+dnf5 -y --refresh makecache
+dnf5 -y --refresh distro-sync
+dnf5 -y --refresh makecache
 
 dnf5 -y install fuse
 dnf5 -y install python3-uv
@@ -57,6 +55,10 @@ ln -sf /usr/share/v2ray /usr/share/v2raya
 # ln -sf /usr/share/v2ray /usr/local/share/v2raya # /usr/local is actually /var/usrlocal
 
 dnf5 -y swap zram-generator-defaults cachyos-settings
+
+dnf5 -y --refresh makecache
+dnf5 -y --refresh distro-sync
+dnf5 -y --refresh makecache
 
 dnf5 -y remove firefox
 dnf5 -y autoremove

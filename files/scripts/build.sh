@@ -4,10 +4,6 @@ set -oue pipefail
 
 shopt -s nullglob
 
-dnf5 -y --refresh makecache
-dnf5 -y --refresh distro-sync
-dnf5 -y --refresh makecache
-
 dnf5 -y install dnf-plugins-core
 dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-gpg-keys terra-release terra-release-extras terra-release-mesa # terra-release-multimedia
 dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
@@ -55,10 +51,6 @@ ln -sf /usr/share/v2ray /usr/share/v2raya
 # ln -sf /usr/share/v2ray /usr/local/share/v2raya # /usr/local is actually /var/usrlocal
 
 dnf5 -y swap zram-generator-defaults cachyos-settings
-
-dnf5 -y --refresh makecache
-dnf5 -y --refresh distro-sync
-dnf5 -y --refresh makecache
 
 dnf5 -y remove firefox
 dnf5 -y autoremove

@@ -15,8 +15,9 @@ wget -O /etc/hosts https://raw.githubusercontent.com/MAnitosik/mx-os/refs/heads/
 
 wget -O /etc/rpm-ostreed.conf https://raw.githubusercontent.com/MAnitosik/mx-os/refs/heads/main/files/system/etc/rpm-ostreed.conf
 
-mkdir -p ~/ventoy
-wget -O ~/ventoy/ventoy-1.1.18-linux.tar.gz https://github.com/ventoy/Ventoy/releases/download/v1.1.18/ventoy-1.1.18-linux.tar.gz
+mkdir -p ~/rescue
+wget -O ~/rescue/ventoy-1.1.18-linux.tar.gz https://github.com/ventoy/Ventoy/releases/download/v1.1.18/ventoy-1.1.18-linux.tar.gz
+wget -O ~/rescue/main.zip https://github.com/igareck/vpn-configs-for-russia/archive/refs/heads/main.zip
 
 flatpak install -y --system --noninteractive flathub org.onlyoffice.desktopeditors
 flatpak install -y --system --noninteractive flathub io.github.wartybix.Constrict

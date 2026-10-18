@@ -6,6 +6,7 @@ shopt -s nullglob
 
 dnf5 -y install dnf-plugins-core
 dnf5 -y config-manager addrepo --from-repofile=https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+dnf5 -y config-manager addrepo --from-repofile=https://repo.secureblue.dev/secureblue.repo
 dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 dnf5 -y copr enable cubewhy/jetbrains
 dnf5 -y copr enable bieszczaders/kernel-cachyos-lto
@@ -21,7 +22,7 @@ dnf5 -y install gcc clang
 
 dnf5 -y install wine wine-dxvk gstreamer1-plugins-good dosbox-staging winetricks
 
-dnf5 -y install brave-origin torbrowser-launcher
+dnf5 -y install brave-origin trivalent
 
 dnf5 -y install tealdeer fastfetch micro zed gh git desktop-plus-bin gnome-boxes lact obs-studio mediawriter
 dnf5 -y install jetbrains-pycharm jetbrains-clion jetbrains-rustrover

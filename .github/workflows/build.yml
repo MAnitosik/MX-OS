@@ -65,4 +65,4 @@ jobs:
             ${{ steps.build.outputs.iso_path }}/${{ steps.build.outputs.iso_name }}-CHECKSUM
           if-no-files-found: warn
           retention-days: 90
-          compression-level: 9
+          compression-level: 1

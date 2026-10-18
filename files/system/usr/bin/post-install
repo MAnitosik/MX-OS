@@ -15,9 +15,9 @@ wget -O /etc/hosts https://raw.githubusercontent.com/MAnitosik/mx-os/refs/heads/
 
 wget -O /etc/rpm-ostreed.conf https://raw.githubusercontent.com/MAnitosik/mx-os/refs/heads/main/files/system/etc/rpm-ostreed.conf
 
-mkdir -p ~/rescue
-wget -O ~/rescue/ventoy-1.1.18-linux.tar.gz https://github.com/ventoy/Ventoy/releases/download/v1.1.18/ventoy-1.1.18-linux.tar.gz
-wget -O ~/rescue/main.zip https://github.com/igareck/vpn-configs-for-russia/archive/refs/heads/main.zip
+mkdir -p $HOME/rescue
+wget -O $HOME/rescue/ventoy-1.1.18-linux.tar.gz https://github.com/ventoy/Ventoy/releases/download/v1.1.18/ventoy-1.1.18-linux.tar.gz
+wget -O $HOME/rescue/main.zip https://github.com/igareck/vpn-configs-for-russia/archive/refs/heads/main.zip
 
 flatpak install -y --system --noninteractive flathub org.onlyoffice.desktopeditors
 flatpak install -y --system --noninteractive flathub io.github.wartybix.Constrict
@@ -30,7 +30,9 @@ flatpak install -y --system --noninteractive flathub it.mijorus.gearlever
 flatpak install -y --system --noninteractive flathub com.usebottles.bottles
 flatpak install -y --system --noninteractive flathub org.vinegarhq.Sober
 flatpak install -y --system --noninteractive flathub org.vinegarhq.Vinegar
-flatpak install -y --system --noninteractive https://elyprismlauncher.github.io/flatpak/elyprismlauncher.flatpakref
+if ! [[ -e /var/lib/flatpak/app/io.github.elyprismlauncher.ElyPrismLauncher ]]; then
+    flatpak install -y --system --noninteractive https://elyprismlauncher.github.io/flatpak/elyprismlauncher.flatpakref
+fi
 
 flatpak install -y --system --noninteractive flathub org.telegram.desktop
 flatpak install -y --system --noninteractive flathub chat.delta.desktop

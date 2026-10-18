@@ -15,6 +15,9 @@ wget -O /etc/hosts https://raw.githubusercontent.com/MAnitosik/mx-os/refs/heads/
 
 wget -O /etc/rpm-ostreed.conf https://raw.githubusercontent.com/MAnitosik/mx-os/refs/heads/main/files/system/etc/rpm-ostreed.conf
 
+mkdir -p ~/ventoy
+wget -O ~/ventoy/ventoy-1.1.18-linux.tar.gz https://github.com/ventoy/Ventoy/releases/download/v1.1.18/ventoy-1.1.18-linux.tar.gz
+
 flatpak install -y --system --noninteractive flathub org.onlyoffice.desktopeditors
 flatpak install -y --system --noninteractive flathub io.github.wartybix.Constrict
 flatpak install -y --system --noninteractive flathub com.github.huluti.Curtail

@@ -54,6 +54,10 @@ dnf5 -y remove firefox
 dnf5 -y autoremove
 dnf5 -y clean all
 
+mkdir -p /usr/share/rescue-nerd
+wget -O /usr/share/rescue-nerd/ventoy.tar.gz https://github.com/ventoy/Ventoy/releases/download/v1.1.18/ventoy-1.1.18-linux.tar.gz
+wget -O /usr/share/rescue-nerd/main.zip https://github.com/igareck/vpn-configs-for-russia/archive/refs/heads/main.zip
+
 systemctl enable lactd
 systemctl enable AmneziaVPN
 systemctl enable v2raya

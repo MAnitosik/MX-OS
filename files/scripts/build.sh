@@ -9,6 +9,8 @@ dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/te
 dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 dnf5 -y copr enable cubewhy/jetbrains
 dnf5 -y copr enable bieszczaders/kernel-cachyos-addons
+dnf5 -y autoremove
+dnf5 -y clean all
 dnf5 -y --best --refresh --allow-vendor-change makecache
 dnf5 -y --best --refresh --allow-vendor-change distro-sync --allowerasing
 

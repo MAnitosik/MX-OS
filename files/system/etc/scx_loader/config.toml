@@ -2,3 +2,7 @@ default_sched = "scx_pandemonium"
 default_mode = "Auto"
 [scheds.scx_pandemonium]
 auto_mode = []
+gaming_mode = []
+lowlatency_mode = []
+powersave_mode = []
+server_mode = []

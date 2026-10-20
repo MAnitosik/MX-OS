@@ -11,9 +11,12 @@ fi
 
 tldr --update
 
-wget -O /etc/hosts https://raw.githubusercontent.com/MAnitosik/mx-os/refs/heads/main/hosts
+wget -O /etc/hosts https://raw.githubusercontent.com/MAnitosik/mx-os/refs/heads/main/data/hosts
 
 wget -O /etc/rpm-ostreed.conf https://raw.githubusercontent.com/MAnitosik/mx-os/refs/heads/main/files/system/etc/rpm-ostreed.conf
+
+mkdir -p /etc/scx_loader
+wget -O /etc/scx_loader/config.toml https://raw.githubusercontent.com/MAnitosik/mx-os/refs/heads/main/files/system/etc/scx_loader/config.toml
 
 mkdir -p $HOME/rescue
 wget -O $HOME/rescue/ventoy-1.1.18-linux.tar.gz https://github.com/ventoy/Ventoy/releases/download/v1.1.18/ventoy-1.1.18-linux.tar.gz

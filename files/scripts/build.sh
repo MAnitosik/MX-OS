@@ -27,7 +27,8 @@ dnf5 -y install brave-origin
 dnf5 -y install tealdeer fastfetch micro zed gh git desktop-plus-bin gnome-boxes lact obs-studio mediawriter
 dnf5 -y install jetbrains-pycharm jetbrains-clion jetbrains-rustrover
 
-# dnf5 -y install steam faugus-launcher heroic-games-launcher protonplus mangohud
+# dnf5 -y install hidapi dbus-x11 xdg-user-dirs gobject-introspection ntsync-autoload udev-joystick-blacklist-rm
+# dnf5 -y install steam faugus-launcher protonplus
 # dnf5 -y install "https://github.com/hydralauncher/hydra/releases/download/v4.1.6/hydralauncher-4.1.6.x86_64.rpm"
 dnf5 -y install discord-openasar
 

@@ -5,12 +5,12 @@ description: Mr? Ms? Wrong! MX is the right choice!
 base-image: ghcr.io/blue-build/base-images/fedora-cosmic
 image-version: latest
 modules:
+  - type: script
+    scripts:
+      - build.sh
   - type: files
     files:
       - source: system
         destination: /
-  - type: script
-    scripts:
-      - build.sh
   - type: initramfs
   - type: signing

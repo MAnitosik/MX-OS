@@ -45,6 +45,8 @@ wget -O /usr/bin/v2raya_core https://github.com/v2rayA/v2rayA/releases/download/
 chmod +x /usr/bin/v2raya_core
 ln -sf /usr/share/v2ray /usr/share/v2raya
 
+dnf5 -y install libcap systemd glibc nmap-ncat curl ipset nftables
+
 dnf5 -y swap --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons zram-generator-defaults cachyos-settings
 dnf5 -y install --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons scx-scheds scx-tools
 dnf5 -y install --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons ananicy-cpp

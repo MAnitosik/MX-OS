@@ -18,6 +18,11 @@ wget -O /etc/rpm-ostreed.conf https://raw.githubusercontent.com/MAnitosik/mx-os/
 mkdir -p /etc/scx_loader
 wget -O /etc/scx_loader/config.toml https://raw.githubusercontent.com/MAnitosik/mx-os/refs/heads/main/files/system/etc/scx_loader/config.toml
 
+flatpak remote-add --system --if-not-exists --disable fedora oci+https://registry.fedoraproject.org
+flatpak remote-add --system --if-not-exists --disable fedora-testing oci+https://registry.fedoraproject.org#testing
+flatpak remote-add --system --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --system --if-not-exists cosmic https://apt.pop-os.org/cosmic/cosmic.flatpakrepo
+
 flatpak install -y --system --noninteractive flathub org.onlyoffice.desktopeditors
 flatpak install -y --system --noninteractive flathub io.github.wartybix.Constrict
 flatpak install -y --system --noninteractive flathub com.github.huluti.Curtail

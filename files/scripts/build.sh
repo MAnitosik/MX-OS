@@ -29,7 +29,7 @@ dnf5 -y install jetbrains-pycharm jetbrains-clion jetbrains-rustrover
 
 # dnf5 -y install hidapi dbus-x11 xdg-user-dirs gobject-introspection ntsync-autoload udev-joystick-blacklist-rm
 # dnf5 -y install steam faugus-launcher protonplus
-# dnf5 -y install "https://github.com/hydralauncher/hydra/releases/download/v4.1.6/hydralauncher-4.1.6.x86_64.rpm"
+# dnf5 -y install "https://github.com/hydralauncher/hydra/releases/download/v4.2.0/hydralauncher-4.2.0.x86_64.rpm"
 dnf5 -y install discord-openasar
 
 wget https://github.com/amnezia-vpn/amnezia-client/releases/download/5.0.3.0/AmneziaVPN_5.0.3.0_linux_x64.run

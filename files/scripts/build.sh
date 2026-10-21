@@ -7,7 +7,6 @@ shopt -s nullglob
 dnf5 -y install dnf-plugins-core
 dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-gpg-keys terra-release terra-release-extras terra-release-mesa terra-release-nvidia # terra-release-multimedia
 dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
-dnf5 -y copr enable cubewhy/jetbrains
 dnf5 -y copr enable bieszczaders/kernel-cachyos-addons
 dnf5 -y autoremove
 dnf5 -y clean all
@@ -25,7 +24,6 @@ dnf5 -y install gcc clang
 dnf5 -y install brave-origin
 
 dnf5 -y install tealdeer fastfetch micro zed gh git desktop-plus-bin gnome-boxes lact obs-studio mediawriter
-dnf5 -y install jetbrains-pycharm jetbrains-clion jetbrains-rustrover
 
 # dnf5 -y install hidapi dbus-x11 xdg-user-dirs gobject-introspection ntsync-autoload udev-joystick-blacklist-rm
 # dnf5 -y install steam faugus-launcher protonplus

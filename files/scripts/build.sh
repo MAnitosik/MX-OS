@@ -25,7 +25,7 @@ dnf5 -y install brave-origin
 
 dnf5 -y install tealdeer fastfetch micro zed gh git desktop-plus-bin gnome-boxes lact obs-studio mediawriter
 
-# dnf5 -y install hidapi dbus-x11 xdg-user-dirs gobject-introspection ntsync-autoload udev-joystick-blacklist-rm
+# dnf5 -y install hidapi gobject-introspection ntsync-autoload udev-joystick-blacklist-rm
 # dnf5 -y install steam faugus-launcher protonplus
 # dnf5 -y install "https://github.com/hydralauncher/hydra/releases/download/v4.2.0/hydralauncher-4.2.0.x86_64.rpm"
 dnf5 -y install discord-openasar
@@ -44,8 +44,6 @@ dnf5 -y install v2raya
 wget -O /usr/bin/v2raya_core https://github.com/v2rayA/v2rayA/releases/download/v2.5.10/v2raya_core_linux_x64_2.5.10
 chmod +x /usr/bin/v2raya_core
 ln -sf /usr/share/v2ray /usr/share/v2raya
-
-dnf5 -y install libcap systemd glibc nmap-ncat curl ipset nftables
 
 dnf5 -y swap --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons zram-generator-defaults cachyos-settings
 dnf5 -y install --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons scx-scheds scx-tools

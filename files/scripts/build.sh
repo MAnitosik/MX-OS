@@ -30,14 +30,18 @@ dnf5 -y install tealdeer fastfetch micro zed gh git desktop-plus-bin gnome-boxes
 # dnf5 -y install "https://github.com/hydralauncher/hydra/releases/download/v4.2.0/hydralauncher-4.2.0.x86_64.rpm"
 dnf5 -y install discord-openasar
 
-wget https://github.com/amnezia-vpn/amnezia-client/releases/download/5.0.3.0/AmneziaVPN_5.0.3.0_linux_x64.run
-chmod +x AmneziaVPN_5.0.3.0_linux_x64.run
+export OLD_HOME=$HOME
 export HOME=/tmp/amneziavpn
 mkdir -p "$HOME"
-QT_QPA_PLATFORM=offscreen ./AmneziaVPN_5.0.3.0_linux_x64.run --accept-licenses --default-answer --confirm-command install
-rm -rf AmneziaVPN_5.0.3.0_linux_x64.run "$HOME"
+wget -O /tmp/amneziavpn/AmneziaVPN_5.0.3.0_linux_x64.run https://github.com/amnezia-vpn/amnezia-client/releases/download/5.0.3.0/AmneziaVPN_5.0.3.0_linux_x64.run
+chmod +x /tmp/amneziavpn/AmneziaVPN_5.0.3.0_linux_x64.run
+QT_QPA_PLATFORM=offscreen /tmp/amneziavpn/AmneziaVPN_5.0.3.0_linux_x64.run --accept-licenses --default-answer --confirm-command install
+rm -rf /tmp/amneziavpn/AmneziaVPN_5.0.3.0_linux_x64.run "$HOME"
 ln -sf /opt/AmneziaVPN/bin/AmneziaVPN /usr/bin/AmneziaVPN
 ln -sf /opt/AmneziaVPN/bin/AmneziaVPN /usr/sbin/AmneziaVPN
+export HOME=$OLD_HOME
+export -n OLD_HOME
+unset OLD_HOME
 
 dnf5 -y install v2ray-geoip v2ray-domain-list-community xray
 dnf5 -y install v2raya

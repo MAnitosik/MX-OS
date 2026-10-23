@@ -2,8 +2,6 @@
 
 set -oue pipefail
 
-shopt -s nullglob
-
 dnf5 -y install dnf-plugins-core
 dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-gpg-keys terra-release terra-release-extras terra-release-mesa terra-release-nvidia # terra-release-multimedia
 dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo

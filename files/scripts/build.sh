@@ -5,6 +5,7 @@ set -oue pipefail
 dnf5 -y install dnf-plugins-core
 dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-gpg-keys terra-release terra-release-extras terra-release-mesa terra-release-nvidia # terra-release-multimedia
 dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+dnf5 -y copr enable bieszczaders/kernel-cachyos-lto
 dnf5 -y copr enable bieszczaders/kernel-cachyos-addons
 dnf5 -y autoremove
 dnf5 -y clean all
@@ -47,6 +48,9 @@ wget -O /usr/bin/v2raya_core https://github.com/v2rayA/v2rayA/releases/download/
 chmod +x /usr/bin/v2raya_core
 ln -sf /usr/share/v2ray /usr/share/v2raya
 
+dnf5 -y remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
+dnf5 -y install --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-lto kernel-cachyos-lto kernel-cachyos-lto-devel-matched
+
 dnf5 -y swap --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons zram-generator-defaults cachyos-settings
 dnf5 -y install --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons scx-scheds scx-tools
 dnf5 -y install --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons ananicy-cpp
@@ -65,4 +69,4 @@ systemctl enable v2raya
 systemctl enable scx_loader
 systemctl enable ananicy-cpp
 
-# add zapret2, add proper comments to everything
+# add zapret2, add proper comments to everything, add nvidia image, consider configuring hybrid graphics

@@ -31,6 +31,7 @@ jobs:
       matrix:
         recipe:
           - recipe.yml
+          - recipe-nvidia.yml
     steps:
       - name: Maximize build space
         uses: ublue-os/remove-unwanted-software@master

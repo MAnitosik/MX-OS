@@ -24,9 +24,9 @@ dnf5 -y install brave-origin
 
 dnf5 -y install tealdeer fastfetch micro zed gh git desktop-plus-bin gnome-boxes lact obs-studio mediawriter
 
-# dnf5 -y install hidapi gobject-introspection ntsync-autoload udev-joystick-blacklist-rm
+# dnf5 -y install ... # some steam deps
 # dnf5 -y install steam faugus-launcher protonplus
-# dnf5 -y install "https://github.com/hydralauncher/hydra/releases/download/v4.2.0/hydralauncher-4.2.0.x86_64.rpm"
+# dnf5 -y install "https://github.com/hydralauncher/hydra/releases/download/v4.2.0/hydralauncher-4.2.0.x86_64.rpm" # piracy
 dnf5 -y install discord-openasar
 
 export OLD_HOME=$HOME

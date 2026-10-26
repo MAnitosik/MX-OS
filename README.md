@@ -1,20 +1,29 @@
 # Mr? Ms? Wrong! MX is the right choice!
 
-MX-OS is an opinionated OCI image created for personal use.
+**MX-OS is an opinionated OCI image created for personal use.**
 
-It is not recommended for production systems.
+**It is not recommended for production systems.**
 
 ## Key features
 
 - COSMIC desktop
+
 - Aggressive optimizations from CachyOS
+
 - Terra repositories
+
 - Basic coding utilities
+
 - Anti-DPI utilities
+
 - A selection of opinionated preinstalled applications
+
 - The `brave-origin` package is used instead of the `firefox` package
+
 - Network optimizations
+
 - Hardened DNS
+
 - The `hosts` file is optimized for Russia
 
 ## Caveats

@@ -1,6 +1,7 @@
 # Mr? Ms? Wrong! MX is the right choice!
 
 MX-OS is an opinionated OCI image created for personal use.
+
 It is not recommended for production systems.
 
 ## Key features
@@ -19,10 +20,15 @@ It is not recommended for production systems.
 ## Caveats
 
 This OCI image is primarily optimized for AMD CPUs and GPUs, but it should also work on Intel systems.
+
 NVIDIA GPUs are not supported.
+
 The `hosts` file is optimized for Russia.
+
 `mitigations` and `selinux` are disabled by default.
+
 Be careful when overclocking a GPU with LACT.
+
 Layering is disabled by default.
 
 ## Installation

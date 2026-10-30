@@ -30,7 +30,7 @@
 
 This OCI image is primarily optimized for AMD CPUs and GPUs, but it should also work on Intel systems.
 
-Nvidia GPUs are not supported.
+Nvidia support is a work in progress.
 
 The `hosts` file is optimized for Russia.
 
@@ -39,6 +39,8 @@ The `hosts` file is optimized for Russia.
 Be careful when overclocking a GPU with LACT.
 
 Layering is disabled by default.
+
+ARM support is planned.
 
 ## Installation
 

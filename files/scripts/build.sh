@@ -48,7 +48,7 @@ wget -O /usr/bin/v2raya_core https://github.com/v2rayA/v2rayA/releases/download/
 chmod +x /usr/bin/v2raya_core
 ln -sf /usr/share/v2ray /usr/share/v2raya
 
-dnf5 -y remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
+dnf5 -y remove --no-autoremove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
 dnf5 -y install --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-lto kernel-cachyos-lto kernel-cachyos-lto-devel-matched
 
 dnf5 -y swap --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons zram-generator-defaults cachyos-settings

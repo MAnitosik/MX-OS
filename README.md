@@ -48,7 +48,17 @@ Layering is disabled by default.
 sudo bootc switch ghcr.io/manitosik/mx-os:latest
 ```
 
-Reboot after switching.
+```bash
+sudo systemctl reboot
+```
+
+```bash
+sudo bootc switch --enforce-container-sigpolicy ghcr.io/manitosik/mx-os:latest
+```
+
+```bash
+sudo systemctl reboot
+```
 
 Alternatively, download and install an ISO from GitHub Actions.
 

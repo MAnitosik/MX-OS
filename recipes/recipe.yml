@@ -4,6 +4,8 @@ name: mx-os
 description: Mr? Ms? Wrong! MX is the right choice!
 base-image: ghcr.io/blue-build/base-images/fedora-cosmic
 image-version: latest
+platforms:
+  - linux/amd64/v2
 modules:
   - type: script
     scripts:
@@ -12,5 +14,8 @@ modules:
     files:
       - source: system
         destination: /
+  - type: os-release
+    properties:
+      PRETTY_NAME: MX-OS
   - type: initramfs
   - type: signing

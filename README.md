@@ -30,7 +30,7 @@
 
 This OCI image is primarily optimized for AMD CPUs and GPUs, but it should also work on Intel systems.
 
-NVIDIA GPUs are not supported.
+Nvidia images and ISOs are not tested.
 
 The `hosts` file is optimized for Russia.
 

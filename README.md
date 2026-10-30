@@ -40,7 +40,7 @@ Be careful when overclocking a GPU with LACT.
 
 Layering is disabled by default.
 
-ARM support is planned.
+Only x86-64 is supported
 
 ## Installation
 

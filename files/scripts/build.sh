@@ -22,9 +22,7 @@ dnf5 -y install gcc clang
 
 dnf5 -y install brave-origin
 
-dnf5 -y install tealdeer fastfetch micro zed gh git desktop-plus-bin lact obs-studio mediawriter
-dnf5 -y group install --with-optional virtualization
-dnf5 -y install virt-manager
+dnf5 -y install tealdeer fastfetch micro zed gh git desktop-plus-bin lact obs-studio mediawriter gnome-boxes
 
 # dnf5 -y install ... # some steam deps
 # dnf5 -y install steam faugus-launcher protonplus
@@ -67,7 +65,6 @@ wget -O /usr/share/rescue-nerd/ventoy.tar.gz https://github.com/ventoy/Ventoy/re
 wget -O /usr/share/rescue-nerd/main.zip https://github.com/igareck/vpn-configs-for-russia/archive/refs/heads/main.zip
 
 systemctl enable lactd
-systemctl enable libvirtd
 systemctl enable AmneziaVPN
 systemctl enable v2raya
 systemctl enable scx_loader

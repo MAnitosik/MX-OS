@@ -71,3 +71,4 @@ systemctl enable scx_loader
 systemctl enable ananicy-cpp
 
 # add zapret2, add proper comments to everything, add nvidia image, consider configuring hybrid graphics
+# harden DNS, it seems like NetworkManager overrides systemd-resolved settings due to DHCP applying DNS IPs to specifics devices (e.g. eno1)

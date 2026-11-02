@@ -32,7 +32,7 @@ dnf5 -y install discord-openasar
 export OLD_HOME=$HOME
 export HOME=/tmp/amneziavpn
 mkdir -pv "$HOME"
-wget -Ov /tmp/amneziavpn/AmneziaVPN_5.0.3.0_linux_x64.run https://github.com/amnezia-vpn/amnezia-client/releases/download/5.0.3.0/AmneziaVPN_5.0.3.0_linux_x64.run
+wget -O /tmp/amneziavpn/AmneziaVPN_5.0.3.0_linux_x64.run https://github.com/amnezia-vpn/amnezia-client/releases/download/5.0.3.0/AmneziaVPN_5.0.3.0_linux_x64.run
 chmod -v +x /tmp/amneziavpn/AmneziaVPN_5.0.3.0_linux_x64.run
 QT_QPA_PLATFORM=offscreen /tmp/amneziavpn/AmneziaVPN_5.0.3.0_linux_x64.run --accept-licenses --default-answer --confirm-command install
 rm -rfv /tmp/amneziavpn/AmneziaVPN_5.0.3.0_linux_x64.run "$HOME"
@@ -44,7 +44,7 @@ unset OLD_HOME
 
 dnf5 -y install v2ray-geoip v2ray-domain-list-community xray
 dnf5 -y install v2raya
-wget -Ov /usr/bin/v2raya_core https://github.com/v2rayA/v2rayA/releases/download/v2.5.10/v2raya_core_linux_x64_2.5.10
+wget -O /usr/bin/v2raya_core https://github.com/v2rayA/v2rayA/releases/download/v2.5.10/v2raya_core_linux_x64_2.5.10
 chmod -v +x /usr/bin/v2raya_core
 ln -sfv /usr/share/v2ray /usr/share/v2raya
 
@@ -61,8 +61,8 @@ dnf5 -y autoremove
 dnf5 -y clean all
 
 mkdir -pv /usr/share/rescue-nerd
-wget -Ov /usr/share/rescue-nerd/ventoy.tar.gz https://github.com/ventoy/Ventoy/releases/download/v1.1.18/ventoy-1.1.18-linux.tar.gz
-wget -Ov /usr/share/rescue-nerd/main.zip https://github.com/igareck/vpn-configs-for-russia/archive/refs/heads/main.zip
+wget -O /usr/share/rescue-nerd/ventoy.tar.gz https://github.com/ventoy/Ventoy/releases/download/v1.1.18/ventoy-1.1.18-linux.tar.gz
+wget -O /usr/share/rescue-nerd/main.zip https://github.com/igareck/vpn-configs-for-russia/archive/refs/heads/main.zip
 
 systemctl enable lactd
 systemctl enable AmneziaVPN

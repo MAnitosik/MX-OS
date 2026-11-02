@@ -9,6 +9,8 @@ platforms:
   - linux/amd64/v2
 modules:
   - type: script
+    snippets:
+      - "rm /usr/share/plymouth/themes/spinner/watermark.png"
     scripts:
       - build.sh
   - type: files

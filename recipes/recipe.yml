@@ -10,7 +10,7 @@ platforms:
 modules:
   - type: script
     snippets:
-      - "rm /usr/share/plymouth/themes/spinner/watermark.png"
+      - "rm -v /usr/share/plymouth/themes/spinner/watermark.png"
     scripts:
       - build.sh
   - type: files
@@ -20,5 +20,6 @@ modules:
   - type: os-release
     properties:
       PRETTY_NAME: MX-OS
+      VERSION_CODENAME: INFINITY
   - type: initramfs
   - type: signing

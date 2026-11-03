@@ -4,6 +4,8 @@
 
 **It is not recommended for production systems.**
 
+**All credits to [BlueBuild](https://blue-build.org/) and [Universal Blue](https://universal-blue.org/) for making this project possible**
+
 ## Key features
 
 - COSMIC desktop

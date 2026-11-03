@@ -32,10 +32,10 @@ dnf5 -y install discord-openasar
 export OLD_HOME=$HOME
 export HOME=/tmp/amneziavpn
 mkdir -pv "$HOME"
-wget -O /tmp/amneziavpn/AmneziaVPN_5.0.3.0_linux_x64.run https://github.com/amnezia-vpn/amnezia-client/releases/download/5.0.3.0/AmneziaVPN_5.0.3.0_linux_x64.run
-chmod -v +x /tmp/amneziavpn/AmneziaVPN_5.0.3.0_linux_x64.run
-QT_QPA_PLATFORM=offscreen /tmp/amneziavpn/AmneziaVPN_5.0.3.0_linux_x64.run --accept-licenses --default-answer --confirm-command install
-rm -rfv /tmp/amneziavpn/AmneziaVPN_5.0.3.0_linux_x64.run "$HOME"
+wget -O /tmp/amneziavpn/AmneziaVPN.run https://github.com/amnezia-vpn/amnezia-client/releases/download/5.1.0.6/AmneziaVPN_5.1.0.6_linux_x64.run
+chmod -v +x /tmp/amneziavpn/AmneziaVPN.run
+QT_QPA_PLATFORM=offscreen /tmp/amneziavpn/AmneziaVPN.run --accept-licenses --default-answer --confirm-command install
+rm -rfv /tmp/amneziavpn/AmneziaVPN.run "$HOME"
 ln -sfv /opt/AmneziaVPN/bin/AmneziaVPN /usr/bin/AmneziaVPN
 ln -sfv /opt/AmneziaVPN/bin/AmneziaVPN /usr/sbin/AmneziaVPN
 export HOME=$OLD_HOME
@@ -44,7 +44,7 @@ unset OLD_HOME
 
 dnf5 -y install v2ray-geoip v2ray-domain-list-community xray
 dnf5 -y install v2raya
-wget -O /usr/bin/v2raya_core https://github.com/v2rayA/v2rayA/releases/download/v2.5.10/v2raya_core_linux_x64_2.5.10
+wget -O /usr/bin/v2raya_core https://github.com/v2rayA/v2rayA/releases/download/v2.5.13/v2raya_core_linux_x64_2.5.13
 chmod -v +x /usr/bin/v2raya_core
 ln -sfv /usr/share/v2ray /usr/share/v2raya
 

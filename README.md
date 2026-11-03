@@ -2,9 +2,9 @@
 
 **MX-OS is an opinionated OCI image created for personal use.**
 
-**It is not recommended for production systems.**
+**This image is not recommended for production systems.**
 
-**All credits to [BlueBuild](https://blue-build.org/) and [Universal Blue](https://universal-blue.org/) for making this project possible**
+**All credits go to [BlueBuild](https://blue-build.org/) and [Universal Blue](https://universal-blue.org/) for making this project possible**
 
 ## Key features
 
@@ -30,11 +30,11 @@
 
 ## Caveats
 
-This OCI image is primarily optimized for AMD CPUs and GPUs, but it should also work on Intel systems.
+This image is primarily optimized for AMD CPUs and GPUs, but it should also work on Intel systems.
 
 Nvidia support is planned.
 
-The `hosts` file is optimized for Russia.
+The `hosts` file is optimized for **Russia**.
 
 `mitigations` and `selinux` are disabled by default.
 

@@ -16,7 +16,7 @@ env:
   IMAGE_NAME: mx-os
   IMAGE_REPO: ghcr.io/manitosik
   IMAGE_TAG: latest
-  VERSION: 44
+  VERSION: 45
   VARIANT: cosmic
 jobs:
   bluebuild:

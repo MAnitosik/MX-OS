@@ -2,9 +2,9 @@
 
 **MX-OS is an opinionated OCI image created for personal use.**
 
-**This image is not recommended for production systems.**
+**This image is not recommended for production systems or newbies.**
 
-**All credits go to [BlueBuild](https://blue-build.org/) and [Universal Blue](https://universal-blue.org/) for making this project possible**
+**All credits go to [BlueBuild](https://blue-build.org/) and [Universal Blue](https://universal-blue.org/) for making this project possible.**
 
 ## Key features
 

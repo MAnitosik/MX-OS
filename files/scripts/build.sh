@@ -14,15 +14,13 @@ dnf5 -y --best --refresh --allow-vendor-change distro-sync --allowerasing
 
 dnf5 -y install fuse
 dnf5 -y install python3-uv
-dnf5 -y install nodejs npm
 dnf5 -y install rust cargo
-dnf5 -y install ruby
-dnf5 -y install golang
 dnf5 -y install gcc clang
 
 dnf5 -y install brave-origin
 
-dnf5 -y install tealdeer fastfetch micro zed gh git desktop-plus-bin lact obs-studio mediawriter gnome-boxes
+dnf5 -y install fastfetch micro zed git desktop-plus-bin lact obs-studio mediawriter
+dnf5 -y group install --with-optional virtualization
 
 # dnf5 -y install ... # some steam deps
 # dnf5 -y install steam faugus-launcher protonplus
@@ -64,6 +62,7 @@ wget -O /usr/share/rescue-nerd/ventoy.tar.gz https://github.com/ventoy/Ventoy/re
 wget -O /usr/share/rescue-nerd/main.zip https://github.com/igareck/vpn-configs-for-russia/archive/refs/heads/main.zip
 
 systemctl enable lactd
+systemctl enable libvirtd
 systemctl enable AmneziaVPN
 systemctl enable v2raya
 systemctl enable scx_loader

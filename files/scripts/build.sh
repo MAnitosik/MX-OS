@@ -68,4 +68,4 @@ systemctl enable v2raya
 systemctl enable scx_loader
 systemctl enable ananicy-cpp
 
-# add zapret2, add proper comments to everything, add nvidia image, consider configuring hybrid graphics
+# add zapret2, add proper comments to everything, add nvidia image, consider configuring hybrid graphics, add default toolbx/distrobox configuration

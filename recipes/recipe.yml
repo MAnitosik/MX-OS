@@ -3,7 +3,7 @@
 name: mx-os
 description: Mr? Ms? Wrong! MX is the right choice!
 base-image: ghcr.io/blue-build/base-images/fedora-cosmic
-image-version: latest
+image-version: gts
 platforms:
   - linux/amd64
 modules:

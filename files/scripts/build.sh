@@ -39,11 +39,8 @@ export HOME=$OLD_HOME
 export -n OLD_HOME
 unset OLD_HOME
 
-dnf5 -y install v2ray-geoip v2ray-domain-list-community xray
+dnf5 -y install v2ray-geoip v2ray-domain-list-community
 dnf5 -y install v2raya
-wget -O /usr/bin/v2raya_core https://github.com/v2rayA/v2rayA/releases/download/v2.5.13/v2raya_core_linux_x64_2.5.13
-chmod -v +x /usr/bin/v2raya_core
-ln -sfv /usr/share/v2ray /usr/share/v2raya
 
 dnf5 -y remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
 dnf5 -y install --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-lto kernel-cachyos-lto kernel-cachyos-lto-devel-matched

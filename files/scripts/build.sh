@@ -11,7 +11,7 @@ dnf5 -y copr enable bieszczaders/kernel-cachyos-addons
 dnf5 -y --best --refresh --allow-vendor-change makecache
 dnf5 -y --best --refresh --allow-vendor-change distro-sync --allowerasing
 
-dnf5 -y install cosmic-desktop
+dnf5 -y --allow-vendor-change install --allowerasing cosmic-desktop
 
 dnf5 -y install fuse
 dnf5 -y install python3-uv

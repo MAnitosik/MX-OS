@@ -7,8 +7,6 @@ dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/te
 dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 dnf5 -y copr enable bieszczaders/kernel-cachyos-lto
 dnf5 -y copr enable bieszczaders/kernel-cachyos-addons
-dnf5 -y autoremove
-dnf5 -y clean all
 dnf5 -y --best --refresh --allow-vendor-change makecache
 dnf5 -y --best --refresh --allow-vendor-change distro-sync --allowerasing
 
@@ -42,12 +40,12 @@ unset OLD_HOME
 dnf5 -y install v2ray-geoip v2ray-domain-list-community
 dnf5 -y install v2raya
 
-dnf5 -y remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
-dnf5 -y install --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-lto kernel-cachyos-lto kernel-cachyos-lto-devel-matched
+dnf5 -y --allow-vendor-change remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
+dnf5 -y --allow-vendor-change install --allowerasing --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-lto kernel-cachyos-lto kernel-cachyos-lto-devel-matched
 
-dnf5 -y swap --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons zram-generator-defaults cachyos-settings
-dnf5 -y install --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons scx-scheds scx-tools
-dnf5 -y install --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons ananicy-cpp
+dnf5 -y --allow-vendor-change swap --allowerasing --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons zram-generator-defaults cachyos-settings
+dnf5 -y --allow-vendor-change install --allowerasing --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons scx-scheds scx-tools
+dnf5 -y --allow-vendor-change install --allowerasing --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons ananicy-cpp
 
 dnf5 -y remove firefox
 dnf5 -y autoremove

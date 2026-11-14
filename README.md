@@ -8,7 +8,7 @@
 
 ## Key features
 
-- COSMIC desktop
+- COSMIC desktop (nightly releases)
 
 - Aggressive optimizations from CachyOS
 

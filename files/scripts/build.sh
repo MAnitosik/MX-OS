@@ -29,7 +29,7 @@ dnf5 -y install fastfetch micro zed git desktop-plus-bin lact obs-studio mediawr
 export OLD_HOME=$HOME
 export HOME=/tmp/amneziavpn
 mkdir -pv "$HOME"
-wget -O /tmp/amneziavpn/AmneziaVPN.run https://github.com/amnezia-vpn/amnezia-client/releases/download/5.1.0.6/AmneziaVPN_5.1.0.6_linux_x64.run
+wget -O /tmp/amneziavpn/AmneziaVPN.run https://github.com/amnezia-vpn/amnezia-client/releases/download/5.1.1.4/AmneziaVPN_5.1.1.4_linux_x64.run
 chmod -v +x /tmp/amneziavpn/AmneziaVPN.run
 QT_QPA_PLATFORM=offscreen /tmp/amneziavpn/AmneziaVPN.run --accept-licenses --default-answer --confirm-command install
 rm -rfv /tmp/amneziavpn/AmneziaVPN.run "$HOME"

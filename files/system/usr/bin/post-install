@@ -16,8 +16,17 @@ wget -O /etc/scx_loader/config.toml https://raw.githubusercontent.com/MAnitosik/
 
 flatpak remote-add --system --if-not-exists --disable fedora oci+https://registry.fedoraproject.org
 flatpak remote-add --system --if-not-exists --disable fedora-testing oci+https://registry.fedoraproject.org#testing
+flatpak remote-add --user --if-not-exists --disable fedora oci+https://registry.fedoraproject.org
+flatpak remote-add --user --if-not-exists --disable fedora-testing oci+https://registry.fedoraproject.org#testing
 flatpak remote-add --system --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak remote-add --system --if-not-exists cosmic https://apt.pop-os.org/cosmic/cosmic.flatpakrepo
+flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --user --if-not-exists cosmic https://apt.pop-os.org/cosmic/cosmic.flatpakrepo
+
+flatpak remote-delete --system fedora
+flatpak remote-delete --system fedora-testing
+flatpak remote-delete --user fedora
+flatpak remote-delete --user fedora-testing
 
 flatpak install -y --system --noninteractive --or-update flathub org.onlyoffice.desktopeditors
 flatpak install -y --system --noninteractive --or-update flathub io.github.wartybix.Constrict

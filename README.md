@@ -49,7 +49,7 @@ Only x86-64-v3 or later is supported.
 1. If you already have an OCI image installed, switch to MX-OS with:
 
 ```bash
-sudo bootc switch ghcr.io/manitosik/mx-os:latest
+sudo bootc switch ghcr.io/manitosik/mx-os/mx-os:latest
 ```
 
 ```bash
@@ -57,7 +57,7 @@ sudo systemctl reboot
 ```
 
 ```bash
-sudo bootc switch --enforce-container-sigpolicy ghcr.io/manitosik/mx-os:latest
+sudo bootc switch --enforce-container-sigpolicy ghcr.io/manitosik/mx-os/mx-os:latest
 ```
 
 ```bash

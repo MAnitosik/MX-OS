@@ -29,11 +29,14 @@ flatpak install -y --system --noninteractive --or-update flathub com.github.Pint
 flatpak install -y --system --noninteractive --or-update flathub com.ranfdev.DistroShelf
 flatpak install -y --system --noninteractive --or-update flathub it.mijorus.gearlever
 flatpak install -y --system --noninteractive --or-update flathub com.usebottles.bottles
-flatpak install -y --system --noninteractive --or-update flathub org.vinegarhq.Sober
-flatpak install -y --system --noninteractive --or-update flathub org.vinegarhq.Vinegar
+flatpak install -y --system --noninteractive --or-update flathub org.vinegarhq.Sober # replace with https://github.com/QuadraHQ/quadra-rewrite later
+flatpak install -y --system --noninteractive --or-update flathub org.vinegarhq.Vinegar # replace with https://github.com/QuadraHQ/quadra-rewrite later
 if ! [[ -e /var/lib/flatpak/app/io.github.elyprismlauncher.ElyPrismLauncher ]]; then
     flatpak install -y --system --noninteractive --or-update https://elyprismlauncher.github.io/flatpak/elyprismlauncher.flatpakref
 fi
 
+if ! [[ -e /var/lib/flatpak/app/cz.viceverse.serein ]]; then
+    flatpak install -y --system --noninteractive --or-update https://viceverse-cz.github.io/Serein/flatpak/serein.flatpakref
+fi
 flatpak install -y --system --noninteractive --or-update flathub org.telegram.desktop
 flatpak install -y --system --noninteractive --or-update flathub chat.delta.desktop

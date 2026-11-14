@@ -4,11 +4,14 @@ set -oue pipefail
 
 dnf5 -y install dnf-plugins-core
 dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-gpg-keys terra-release terra-release-extras terra-release-mesa # terra-release-nvidia # terra-release-multimedia
+dnf5 -y copr enable ryanabx/cosmic-epoch
 dnf5 -y config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 dnf5 -y copr enable bieszczaders/kernel-cachyos-lto
 dnf5 -y copr enable bieszczaders/kernel-cachyos-addons
 dnf5 -y --best --refresh --allow-vendor-change makecache
 dnf5 -y --best --refresh --allow-vendor-change distro-sync --allowerasing
+
+dnf5 -y install cosmic-desktop
 
 dnf5 -y install fuse
 dnf5 -y install python3-uv
@@ -43,7 +46,7 @@ dnf5 -y install v2raya
 dnf5 -y --allow-vendor-change remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
 dnf5 -y --allow-vendor-change install --allowerasing --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-lto kernel-cachyos-lto kernel-cachyos-lto-devel-matched
 
-dnf5 -y --allow-vendor-change swap --allowerasing --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons zram-generator-defaults cachyos-settings
+dnf5 -y --allow-vendor-change swap --allowerasing --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons zram-generator-defaults cachyos-settings-1.4.0
 dnf5 -y --allow-vendor-change install --allowerasing --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons scx-scheds scx-tools
 dnf5 -y --allow-vendor-change install --allowerasing --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons ananicy-cpp
 
@@ -55,6 +58,7 @@ mkdir -pv /usr/share/rescue-nerd
 wget -O /usr/share/rescue-nerd/ventoy.tar.gz https://github.com/ventoy/Ventoy/releases/download/v1.1.18/ventoy-1.1.18-linux.tar.gz
 wget -O /usr/share/rescue-nerd/main.zip https://github.com/igareck/vpn-configs-for-russia/archive/refs/heads/main.zip
 
+systemctl enable cosmic-greeter
 systemctl enable lactd
 systemctl enable AmneziaVPN
 systemctl enable v2raya

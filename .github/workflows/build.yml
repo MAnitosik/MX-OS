@@ -14,8 +14,8 @@ concurrency:
 env:
   ARCH: x86_64
   IMAGE_NAME: mx-os
-  IMAGE_REPO: ghcr.io/manitosik
-  IMAGE_TAG: latest
+  IMAGE_REPO: ghcr.io/manitosik/mx-os
+  IMAGE_TAG: 45
   VERSION: 45
   VARIANT: cosmic
 jobs:

@@ -65,3 +65,4 @@ systemctl enable scx_loader
 systemctl enable ananicy-cpp
 
 # add zapret2, add proper comments to everything, add nvidia image, consider configuring hybrid graphics
+# https://github.com/actions/delete-package-versions, https://gitlab.com/rakuos/packages/rakuos/rakuos-forge

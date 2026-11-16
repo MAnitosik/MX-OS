@@ -29,7 +29,7 @@ dnf5 -y install fastfetch micro zed git desktop-plus-bin lact obs-studio mediawr
 export OLD_HOME=$HOME
 export HOME=/tmp/amneziavpn
 mkdir -pv "$HOME"
-wget -O /tmp/amneziavpn/AmneziaVPN.run https://github.com/amnezia-vpn/amnezia-client/releases/download/5.1.0.6/AmneziaVPN_5.1.0.6_linux_x64.run
+wget -O /tmp/amneziavpn/AmneziaVPN.run https://github.com/amnezia-vpn/amnezia-client/releases/download/5.1.1.9/AmneziaVPN_5.1.1.9_linux_x64.run
 chmod -v +x /tmp/amneziavpn/AmneziaVPN.run
 QT_QPA_PLATFORM=offscreen /tmp/amneziavpn/AmneziaVPN.run --accept-licenses --default-answer --confirm-command install
 rm -rfv /tmp/amneziavpn/AmneziaVPN.run "$HOME"
@@ -45,7 +45,7 @@ dnf5 -y install v2raya
 dnf5 -y --allow-vendor-change remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
 dnf5 -y --allow-vendor-change install --allowerasing --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-lto kernel-cachyos-lto kernel-cachyos-lto-devel-matched
 
-dnf5 -y --allow-vendor-change swap --allowerasing --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons zram-generator-defaults cachyos-settings-1.4.0
+dnf5 -y --allow-vendor-change swap --allowerasing --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons systemd-oomd-defaults cachyos-settings # temporal fix, https://github.com/CachyOS/copr-linux-cachyos/issues/125
 dnf5 -y --allow-vendor-change install --allowerasing --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons scx-scheds scx-tools
 dnf5 -y --allow-vendor-change install --allowerasing --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons ananicy-cpp
 

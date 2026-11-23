@@ -45,7 +45,7 @@ dnf5 -y install v2raya
 dnf5 -y --allow-vendor-change remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
 dnf5 -y --allow-vendor-change install --allowerasing --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-lto kernel-cachyos-lto kernel-cachyos-lto-devel-matched
 
-dnf5 -y --allow-vendor-change swap --allowerasing --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons systemd-oomd-defaults cachyos-settings # temporal fix, https://github.com/CachyOS/copr-linux-cachyos/issues/125
+dnf5 -y --allow-vendor-change do --allowerasing --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons --action=remove zram-generator-defaults systemd-oomd-defaults --action=install cachyos-settings
 dnf5 -y --allow-vendor-change install --allowerasing --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons scx-scheds scx-tools
 dnf5 -y --allow-vendor-change install --allowerasing --from-repo=copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons ananicy-cpp
 

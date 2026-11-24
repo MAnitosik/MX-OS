@@ -38,8 +38,7 @@ flatpak install -y --system --noninteractive --or-update flathub com.github.Pint
 flatpak install -y --system --noninteractive --or-update flathub com.ranfdev.DistroShelf
 flatpak install -y --system --noninteractive --or-update flathub it.mijorus.gearlever
 flatpak install -y --system --noninteractive --or-update flathub com.usebottles.bottles
-flatpak install -y --system --noninteractive --or-update flathub org.vinegarhq.Sober # replace with https://github.com/QuadraHQ/quadra-rewrite later
-flatpak install -y --system --noninteractive --or-update flathub org.vinegarhq.Vinegar # replace with https://github.com/QuadraHQ/quadra-rewrite later
+flatpak install -y --system --noninteractive --or-update flathub org.quadrahq.Quadra
 if ! [[ -e /var/lib/flatpak/app/io.github.elyprismlauncher.ElyPrismLauncher ]]; then
     flatpak install -y --system --noninteractive --or-update https://elyprismlauncher.github.io/flatpak/elyprismlauncher.flatpakref
 fi

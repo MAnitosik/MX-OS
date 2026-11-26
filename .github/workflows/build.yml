@@ -23,7 +23,7 @@ env:
 jobs:
   bluebuild:
     name: Build Custom Image
-    runs-on: ubuntu-26.04
+    runs-on: avrea-ubuntu
     permissions:
       contents: read
       packages: write

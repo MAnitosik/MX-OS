@@ -24,7 +24,7 @@ dnf5 -y install fastfetch micro zed git desktop-plus-bin lact obs-studio mediawr
 
 # dnf5 -y install ... # some steam deps
 # dnf5 -y install steam faugus-launcher protonplus
-# dnf5 -y install "https://github.com/hydralauncher/hydra/releases/download/v4.2.0/hydralauncher-4.2.0.x86_64.rpm" # piracy
+# dnf5 -y install "https://github.com/hydralauncher/hydra/releases/download/v4.4.1/hydralauncher-4.4.1.x86_64.rpm" # piracy
 
 export OLD_HOME=$HOME
 export HOME=/tmp/amneziavpn

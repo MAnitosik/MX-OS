@@ -1,73 +1,43 @@
-# Mr? Ms? Wrong! MX is the right choice!
+# BlueBuild Template &nbsp; [![bluebuild build badge](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
 
-**MX-OS is an opinionated OCI image created for personal use.**
+See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
-**This image is not recommended for production systems or newbies.**
-
-**All credits go to [BlueBuild](https://blue-build.org/) and [Universal Blue](https://universal-blue.org/) for making this project possible.**
-
-## Key features
-
-- COSMIC desktop (nightly releases)
-
-- Aggressive optimizations from CachyOS
-
-- Terra repositories
-
-- Basic coding utilities
-
-- Anti-DPI utilities
-
-- A selection of opinionated preinstalled applications
-
-- The `brave-origin` package is used instead of the `firefox` package
-
-- Network optimizations
-
-- Hardened DNS
-
-- The `hosts` file is optimized for Russia
-
-## Caveats
-
-This image is primarily optimized for AMD CPUs and GPUs, but it should also work on Intel systems.
-
-Nvidia support is planned.
-
-The `hosts` file is optimized for **Russia**.
-
-`mitigations` and `selinux` are disabled by default.
-
-Be careful when overclocking a GPU with LACT.
-
-Layering is disabled by default.
-
-Only x86-64-v3 or later is supported.
+After setup, it is recommended you update this README to describe your custom image.
 
 ## Installation
 
-1. If you already have an OCI image installed, switch to MX-OS with:
+> [!WARNING]  
+> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+
+To rebase an existing atomic Fedora installation to the latest build:
+
+- First rebase to the unsigned image, to get the proper signing keys and policies installed:
+  ```
+  bootc switch ghcr.io/blue-build/template:latest
+  ```
+- Reboot to complete the rebase:
+  ```
+  systemctl reboot
+  ```
+- Then rebase to the signed image, like so:
+  ```
+  bootc switch --enforce-container-sigpolicy ghcr.io/blue-build/template:latest
+  ```
+- Reboot again to complete the installation
+  ```
+  systemctl reboot
+  ```
+
+The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+
+## ISO
+
+If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/how-to/generate-iso/#_top). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+
+## Verification
+
+These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
 
 ```bash
-sudo bootc switch ghcr.io/manitosik/mx-os/mx-os:latest
-```
-
-```bash
-sudo systemctl reboot
-```
-
-```bash
-sudo bootc switch --enforce-container-sigpolicy ghcr.io/manitosik/mx-os/mx-os:latest
-```
-
-```bash
-sudo systemctl reboot
-```
-
-Alternatively, download and install an ISO from GitHub Actions.
-
-2. After installing MX-OS, it is recommended to run:
-
-```bash
-sudo /usr/bin/post-install
+cosign verify --key cosign.pub ghcr.io/blue-build/template
 ```
